@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy 21st!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="party-toggle">
+        <label style="font-weight: bold; font-size: 1.1rem;">
+          <input type="checkbox" onchange="togglePartyMode()" />
+          🎈 Party Mode
+        </label>
+      </div>
+      
+
+  <!-- Section 1: Birthday Message -->
+  <div class="container" id="section1">
+    <div class="flip-card" onclick="revealCard()">
+      <div class="flip-card-inner" id="cardInner">
+        <div class="flip-card-front">
+          <h1>🎂 Happy 21st Birthday!</h1>
+          <p>Tap to reveal your surprise!</p>
+        </div>
+        <div class="flip-card-back">
+          <h2>🎉 Cheers, Bro! 🍻</h2>
+          <p>You’re officially 21! Time to celebrate life.</p>
+          <div class="handwritten" id="animatedMessage">
+            Dear Bro,<br />
+            You’ve hit 21! 🎉<br />
+            This is just the beginning of greatness.<br />
+             From Nids 💛
+          </div>
+        </div>
+      </div>
+    </div>
+    <br> <br> 
+    <button class="next-btn" onclick="nextSection(2)">Next →</button>
+  </div>
+
+  <!-- Section 2: Photo Gallery -->
+  <div class="photo-gallery" id="section2" style="display:none;">
+    <h3>🎉 Photo Gallery</h3>
+    <div class="gallery">
+      <img src="photo 1.jpg" alt="Photo 1" onclick="viewFullSize('photo1.jpg')" />
+      <img src="photo 2.jpg" alt="Photo 2" onclick="viewFullSize('photo2.jpg')" />
+      <img src="photo 3.jpg" alt="Photo 3" onclick="viewFullSize('photo3.jpg')" />
+      <img src="photo 4.jpg" alt="Photo 4" onclick="viewFullSize('photo4.jpg')" />
+    </div>
+    <button class="next-btn" onclick="nextSection(3)">Next →</button>
+  </div>
+
+  <!-- Section 3: Personalized Message -->
+ <!-- Section 3: Personalized Message -->
+<div class="personalized-message" id="section3" style="display:none;">
+    <h3>💬 A Message From Me</h3>
+    <p>
+      Hey Bro! 🎉<br><br>
+      You’re officially 21 and I couldn’t be more proud of you! From all the crazy moments we’ve shared to the ones still ahead, I can’t wait to see what the future holds for you. You're amazing and I hope this year brings you everything you’ve dreamed of and more!<br><br>
+      Wishing you an unforgettable birthday! Let's make it epic. 💥<br><br>
+      From Nids ❤️
+    </p>
+    
+  
+    <!-- Move Share Buttons here -->
+    <div class="share-buttons">
+      <button onclick="copyLink()">🔗 Copy Link</button>
+      <button onclick="shareFacebook()">📱 Facebook</button>
+      <button onclick="shareInstagram()">📸 Instagram</button>
+      <button onclick="shareTikTok()">🎥 TikTok</button>
+    </div>
+  
+    <button class="next-btn" onclick="nextSection(1)">Start Over</button>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
